@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 海外首访语言引导：默认中文首页 (/) 上，无语言偏好的非中文浏览器静默跳转对应语言版。
+      // 爬虫/社交抓取器不跳（SEO 无损）；任何一次手动选择都会写入 gj-lang，此后不再自动跳。
+      (function () {
+        try {
+          if (window.location.pathname !== "/") return;
+          try { if (localStorage.getItem("gj-lang")) return; } catch (e) { return; }
+          var ua = navigator.userAgent || "";
+          if (/bot|crawl|spider|slurp|headless|lighthouse|pingdom|facebook|twitter|pinterest|slack|discord|telegram|whatsapp|line\/|skype|snapchat|preview/i.test(ua)) return;
+          var prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ""];
+          var target = null;
+          for (var i = 0; i < prefs.length; i++) {
+            var l = String(prefs[i] || "").toLowerCase();
+            if (!l) continue;
+            if (l.indexOf("zh") === 0) {
+              // zh-TW / zh-HK 等繁体环境 → 繁体版；简体环境留在默认
+              if (/^zh[-_](tw|hant|hk|mo)/.test(l)) target = "zh-Hant";
+              break;
+            }
+            if (l.indexOf("ja") === 0) { target = "ja"; break; }
+            if (l.indexOf("en") === 0 && !target) target = "en";
+          }
+          if (!target) return;
+          try { localStorage.setItem("gj-lang", target); } catch (e) {}
+          window.location.replace("/" + target + window.location.search + window.location.hash);
+        } catch (e) { /* 任何异常都留在默认页 */ }
+      })();
+    </script>
+    <title>梗鲸 · DeepSeek酱语录 · 蓝色大肥鱼表情包 · DeepSeek娘化拟人梗图</title>
+    <link rel="canonical" href="https://ai-meme.cdqyfdbymn.me/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://ai-meme.cdqyfdbymn.me/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://ai-meme.cdqyfdbymn.me/zh-Hant" />
+    <link rel="alternate" hreflang="en" href="https://ai-meme.cdqyfdbymn.me/en" />
+    <link rel="alternate" hreflang="ja" href="https://ai-meme.cdqyfdbymn.me/ja" />
+    <link rel="alternate" hreflang="x-default" href="https://ai-meme.cdqyfdbymn.me/" />
+    <meta name="description" content="梗鲸 · DeepSeek酱语录 · DeepSeek蓝色大肥鱼（鲸鱼娘）表情包大全，持续更新。DeepSeek娘化拟人二创、大模型嘴替表情包合集，瀑布流浏览，点图放大长按保存。" />
+    <meta name="keywords" content="梗鲸, 梗鲸表情包, DeepSeek表情包, 蓝色大肥鱼表情包, 鲸鱼娘, DeepSeek娘, DeepSeek娘化, DeepSeek拟人, DeepSeek大肥鱼, 吃白饭的蓝色大肥鱼, DeepSeek梗图, AI娘化, AI表情包, 大模型嘴替, DeepSeek酱, 摸鱼表情包" />
+    <meta property="og:title" content="梗鲸 · DeepSeek蓝色大肥鱼表情包" />
+    <meta property="og:description" content="蓝色大肥鱼鲸鱼娘梗图 · 持续更新 · 点图即存" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="梗鲸" />
+    <meta property="og:url" content="https://ai-meme.cdqyfdbymn.me/" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="zh_TW" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:image" content="https://ai-meme.cdqyfdbymn.me/public/og-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="梗鲸 · DeepSeek蓝色大肥鱼鲸鱼娘表情包分享卡" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="梗鲸 · DeepSeek蓝色大肥鱼表情包" />
+    <meta name="twitter:description" content="蓝色大肥鱼鲸鱼娘梗图 · 持续更新 · 点图即存" />
+    <meta name="twitter:image" content="https://ai-meme.cdqyfdbymn.me/public/og-card.jpg" />
+    <meta name="theme-color" content="#4d6bfe" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "梗鲸",
+      "description": "梗鲸——DeepSeek酱语录蓝色大肥鱼（鲸鱼娘）梗图合集，持续更新",
+      "inLanguage": "zh-CN",
+      "keywords": "梗鲸, DeepSeek表情包, 蓝色大肥鱼, 鲸鱼娘, DeepSeek娘, DeepSeek娘化, DeepSeek拟人, AI娘化, AI表情包, 大模型嘴替"
+    }
+    </script>
+    <link rel="stylesheet" href="public/styles.css?v=5" />
+    <link rel="stylesheet" href="public/gallery.css?v=12" />
+    <link rel="icon" type="image/png" sizes="32x32" href="public/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="public/assets/favicon-16.png" />
+    <link rel="icon" type="image/x-icon" href="public/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="public/assets/apple-touch-icon.png" />
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "y9dmq5o3b8");
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <!-- 短站名给移动端用：腾出横向空间放投稿按钮。完整站名仍在 DOM 里，不影响 SEO -->
+        <a href="/" style="text-decoration: none; color: inherit;"
+          ><span class="brand-short" data-i18n="h1Short">梗鲸</span
+          ><span class="brand-full" data-i18n="h1">梗鲸 · DeepSeek鲸鱼娘表情包库</span></a
+        >
+      </h1>
+      <div class="header-buttons">
+        <button id="theme-toggle" data-i18n-attr="aria-label:themeToggleAria" aria-label="切换深色/浅色主题">
+          <img
+            src="public/assets/brightness_4.svg"
+            alt="Toggle Theme"
+            id="theme-icon"
+          />
+        </button>
+        <a
+          id="contribute-btn"
+          class="contribute-btn"
+          data-i18n="contributeShort"
+          data-i18n-attr="title:contribute"
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/the-beating-light-of-the-nail/deepseek-chan-meme-pack/issues"
+          >投稿</a
+        >
+      </div>
+    </header>
+    <div id="loading"></div>
+    <div class="gallery" id="gallery"></div>
+
+    <!-- Modal for image display -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="meme-stats"></div>
+      <!-- 差分条：同图改字变体缩略图（public/diff-strip.js；无分组自动隐藏） -->
+      <div id="diff-strip"></div>
+      <!-- 反馈行跟着弹层走：用户正看着这张图时意图最强，两条链接都会自动带上图号。
+           页脚那个入口在瀑布流末尾，滚到底就补 15 张，实际够不到 -->
+      <div id="meme-feedback">
+        <a
+          id="fix-story-link"
+          data-i18n="fixStory"
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/the-beating-light-of-the-nail/deepseek-chan-meme-pack/issues/new"
+          >解释有误？</a
+        >
+        <a
+          id="report-link"
+          data-i18n="reportThis"
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/the-beating-light-of-the-nail/deepseek-chan-meme-pack/issues/new?template=takedown_report.yml"
+          >举报此图</a
+        >
+        <a
+          id="want-contribute-link"
+          data-i18n="wantContribute"
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/the-beating-light-of-the-nail/deepseek-chan-meme-pack/issues"
+          >我要投稿</a
+        >
+        <!-- 一键标记「不是 AI meme」：免账号进 /review 甄别队列，终审在后台（image-loader.js 接线） -->
+        <button
+          id="offtopic-link"
+          data-i18n="notDeepseek"
+          type="button"
+          hidden
+        >不是 AI meme 图？</button>
+      </div>
+      <div id="story-info"></div>
+      <div id="exif-info"></div>
+        <!-- 原图自动加载：平时隐藏，仅自动加载失败时重新显示作手动重试入口（image-loader.js） -->
+        <button id="load-original-btn" class="load-original-btn" data-i18n="loadOriginal">加载原图</button>
+      <button id="share-card-btn" class="share-card-btn" data-i18n="shareCard">生成分享图</button>
+    </div>
+
+    <!-- 分享卡片画布层 -->
+    <div id="shareOverlay" class="share-overlay">
+      <div class="share-box">
+        <canvas id="shareCanvas"></canvas>
+        <img id="shareImage" class="share-img" alt="分享卡片" data-i18n-attr="alt:shareCard" />
+        <div class="share-tip" id="share-tip" data-i18n="shareTipBar">长按 / 右键保存图片，分享到社区</div>
+        <div class="share-actions">
+          <a id="share-save" class="share-btn" style="display: none;" data-i18n="saveImage">保存图片</a>
+          <button id="share-native" class="share-btn" style="display: none;" data-i18n="systemShare">系统分享…</button>
+          <button id="share-close" class="share-close" data-i18n="close">关闭</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 加载JavaScript模块 -->
+    <script src="public/qrcode.min.js"></script>
+    <script src="public/data-loader.js?v=5"></script>
+    <script src="public/diff-data.js?v=1"></script>
+    <script src="public/meme-stats.js?v=3"></script>
+    <script src="public/diff-strip.js?v=2"></script>
+    <script src="public/nav-pod.js?v=6"></script>
+    <script src="public/progress-bar.js?v=1"></script>
+    <script src="public/image-loader.js?v=15"></script>
+    <script src="public/auto-scroll.js?v=2"></script>
+    <script src="public/layout.js?v=13"></script>
+    <script src="public/share-card.js?v=3"></script>
+    <script src="public/ads.js"></script>
+    <script src="public/gallery.js?v=5"></script>
+    <!-- 四语运行时（module = defer，先于 DOMContentLoaded 执行；经典脚本仅在运行时取词） -->
+    <script type="module" src="public/locale.js?v=24"></script>
+    <!-- 首页轻量桌宠（仅桌面端；素材复用 /games/pet，自带降级与关闭记忆） -->
+    <script type="module" src="public/home-pet.js?v=18"></script>
+
+    <!-- Social Bar (Adsterra) -->
+    <script src="https://pl31062075.profitableratecpmnetwork.com/ef/37/20/ef37204e0c862457d3f84ca2d79390c9.js"></script>
+  </body>
+</html>
